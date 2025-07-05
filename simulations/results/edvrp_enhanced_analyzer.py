@@ -29,7 +29,7 @@ class EDVRPAnalyzer:
         self.time_series_data = {}
         
         print(f"Found {len(self.sca_files)} .sca files")
-        print(f"Found {len(self.vec_files)} .vec files") 
+        print(f"Found {len(self.vec_files)} .vec files")
         print(f"Found {len(self.vci_files)} .vci files")
         
     def extract_config_name(self, file_path):
@@ -636,7 +636,7 @@ class EDVRPAnalyzer:
         print("=" * 60)
         print("Generated files:")
         print("- edvrp_convergence_analysis.png")
-        print("- edvrp_performance_comparison.png") 
+        print("- edvrp_performance_comparison.png")
         print("- edvrp_scalability_analysis.png")
         print("- edvrp_protocol_comparison.png")
         print("- edvrp_failure_analysis.png")
