@@ -1,0 +1,686 @@
+version 3
+run EDVRPMetrics-8-20250705-23:49:21-97481
+attr configname EDVRPMetrics
+attr datetime 20250705-23:49:21
+attr datetimef 20250705-234921
+attr experiment EDVRPMetrics
+attr inifile omnetpp.ini
+attr iterationvars "$alpha=1000000, $beta=0.5"
+attr iterationvarsd alpha=1000000/beta=0.5
+attr iterationvarsf alpha=1000000,beta=0.5-
+attr measurement "$alpha=1000000, $beta=0.5"
+attr network edvrp.simulations.EDVRPTestNetwork
+attr processid 97481
+attr repetition 3
+attr replication #3
+attr resultdir results
+attr runnumber 8
+attr seedset 3
+itervar alpha 1000000
+itervar beta 0.5
+config description "Test EDVRP composite cost metric behavior"
+config network edvrp.simulations.EDVRPTestNetwork
+config sim-time-limit 250s
+config repeat 5
+config **.router*.alpha 1000000
+config **.router*.beta 0.5
+config **.router1.linkBandwidth 10Mbps
+config **.router1.linkLatency 10ms
+config **.router2.linkBandwidth 100Mbps
+config **.router2.linkLatency 1ms
+config **.router3.linkBandwidth 1000Mbps
+config **.router3.linkLatency 0.1ms
+config network edvrp.simulations.EDVRPTestNetwork
+config sim-time-limit 300s
+config seed-set 3
+config num-rngs 3
+config rng-class cMersenneTwister
+config output-scalar-file results/EDVRPMetrics-8.sca
+config output-vector-file results/EDVRPMetrics-8.vec
+config eventlog-file results/EDVRPMetrics-8.elog
+config **.scalar-recording true
+config **.vector-recording true
+config **.router*.convergenceTimeSignal.result-recording-modes +histogram,+stats
+config **.router*.routingTableSizeSignal.result-recording-modes +vector,+stats
+config **.router*.messageCountSignal.result-recording-modes +count,+sum
+config debug-on-errors true
+config print-undisposed true
+
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router3 routingTableUpdates 1
+scalar EDVRPTestNetwork.router3 currentTableSize 2
+scalar EDVRPTestNetwork.router5 routingTableUpdates 1
+scalar EDVRPTestNetwork.router5 currentTableSize 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 routingTableUpdates 1
+scalar EDVRPTestNetwork.router2 currentTableSize 2
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router1 routingTableUpdates 1
+scalar EDVRPTestNetwork.router1 currentTableSize 2
+scalar EDVRPTestNetwork.router3 routingTableUpdates 1
+scalar EDVRPTestNetwork.router3 currentTableSize 3
+scalar EDVRPTestNetwork.router5 routingTableUpdates 1
+scalar EDVRPTestNetwork.router5 currentTableSize 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router6 routingTableUpdates 1
+scalar EDVRPTestNetwork.router6 currentTableSize 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 routingTableUpdates 1
+scalar EDVRPTestNetwork.router3 currentTableSize 4
+scalar EDVRPTestNetwork.router2 routingTableUpdates 1
+scalar EDVRPTestNetwork.router2 currentTableSize 3
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 routingTableUpdates 1
+scalar EDVRPTestNetwork.router6 currentTableSize 3
+scalar EDVRPTestNetwork.router2 routingTableUpdates 1
+scalar EDVRPTestNetwork.router2 currentTableSize 4
+scalar EDVRPTestNetwork.router4 routingTableUpdates 1
+scalar EDVRPTestNetwork.router4 currentTableSize 2
+scalar EDVRPTestNetwork.router6 routingTableUpdates 1
+scalar EDVRPTestNetwork.router6 currentTableSize 4
+scalar EDVRPTestNetwork.router6 routingTableUpdates 1
+scalar EDVRPTestNetwork.router6 currentTableSize 5
+scalar EDVRPTestNetwork.router2 routingTableUpdates 1
+scalar EDVRPTestNetwork.router2 currentTableSize 5
+scalar EDVRPTestNetwork.router2 routingTableUpdates 1
+scalar EDVRPTestNetwork.router2 currentTableSize 6
+scalar EDVRPTestNetwork.router4 routingTableUpdates 1
+scalar EDVRPTestNetwork.router4 currentTableSize 3
+scalar EDVRPTestNetwork.router4 routingTableUpdates 1
+scalar EDVRPTestNetwork.router4 currentTableSize 4
+scalar EDVRPTestNetwork.router1 routingTableUpdates 1
+scalar EDVRPTestNetwork.router1 currentTableSize 3
+scalar EDVRPTestNetwork.router1 routingTableUpdates 1
+scalar EDVRPTestNetwork.router1 currentTableSize 4
+scalar EDVRPTestNetwork.router1 routingTableUpdates 1
+scalar EDVRPTestNetwork.router1 currentTableSize 5
+scalar EDVRPTestNetwork.router1 routingTableUpdates 1
+scalar EDVRPTestNetwork.router1 currentTableSize 6
+scalar EDVRPTestNetwork.router3 routingTableUpdates 1
+scalar EDVRPTestNetwork.router3 currentTableSize 5
+scalar EDVRPTestNetwork.router3 routingTableUpdates 1
+scalar EDVRPTestNetwork.router3 currentTableSize 6
+scalar EDVRPTestNetwork.router5 routingTableUpdates 1
+scalar EDVRPTestNetwork.router5 currentTableSize 4
+scalar EDVRPTestNetwork.router5 routingTableUpdates 1
+scalar EDVRPTestNetwork.router5 currentTableSize 5
+scalar EDVRPTestNetwork.router5 routingTableUpdates 1
+scalar EDVRPTestNetwork.router5 currentTableSize 6
+scalar EDVRPTestNetwork.router3 routingTableUpdates 1
+scalar EDVRPTestNetwork.router3 currentTableSize 6
+scalar EDVRPTestNetwork.router5 routingTableUpdates 1
+scalar EDVRPTestNetwork.router5 currentTableSize 6
+scalar EDVRPTestNetwork.router5 routingTableUpdates 1
+scalar EDVRPTestNetwork.router5 currentTableSize 6
+scalar EDVRPTestNetwork.router6 routingTableUpdates 1
+scalar EDVRPTestNetwork.router6 currentTableSize 6
+scalar EDVRPTestNetwork.router4 routingTableUpdates 1
+scalar EDVRPTestNetwork.router4 currentTableSize 5
+scalar EDVRPTestNetwork.router4 routingTableUpdates 1
+scalar EDVRPTestNetwork.router4 currentTableSize 6
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+scalar EDVRPTestNetwork.router6 helloMessagesSent 2
+scalar EDVRPTestNetwork.router1 helloMessagesSent 1
+scalar EDVRPTestNetwork.router2 helloMessagesSent 3
+scalar EDVRPTestNetwork.router5 helloMessagesSent 2
+scalar EDVRPTestNetwork.router4 helloMessagesSent 1
+scalar EDVRPTestNetwork.router3 helloMessagesSent 3
+par EDVRPTestNetwork.router1.port$o[0].channel typename "\"ned.DatarateChannel\""
+par EDVRPTestNetwork.router1.port$o[0].channel disabled false
+attr mutable ""
+par EDVRPTestNetwork.router1.port$o[0].channel delay 0.001s
+attr mutable ""
+attr unit s
+par EDVRPTestNetwork.router1.port$o[0].channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par EDVRPTestNetwork.router1.port$o[0].channel ber 0
+attr mutable ""
+par EDVRPTestNetwork.router1.port$o[0].channel per 0
+attr mutable ""
+par EDVRPTestNetwork.router2.port$o[0].channel typename "\"ned.DatarateChannel\""
+par EDVRPTestNetwork.router2.port$o[0].channel disabled false
+attr mutable ""
+par EDVRPTestNetwork.router2.port$o[0].channel delay 0.001s
+attr mutable ""
+attr unit s
+par EDVRPTestNetwork.router2.port$o[0].channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par EDVRPTestNetwork.router2.port$o[0].channel ber 0
+attr mutable ""
+par EDVRPTestNetwork.router2.port$o[0].channel per 0
+attr mutable ""
+par EDVRPTestNetwork.router2.port$o[1].channel typename "\"ned.DatarateChannel\""
+par EDVRPTestNetwork.router2.port$o[1].channel disabled false
+attr mutable ""
+par EDVRPTestNetwork.router2.port$o[1].channel delay 0.001s
+attr mutable ""
+attr unit s
+par EDVRPTestNetwork.router2.port$o[1].channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par EDVRPTestNetwork.router2.port$o[1].channel ber 0
+attr mutable ""
+par EDVRPTestNetwork.router2.port$o[1].channel per 0
+attr mutable ""
+par EDVRPTestNetwork.router3.port$o[0].channel typename "\"ned.DatarateChannel\""
+par EDVRPTestNetwork.router3.port$o[0].channel disabled false
+attr mutable ""
+par EDVRPTestNetwork.router3.port$o[0].channel delay 0.001s
+attr mutable ""
+attr unit s
+par EDVRPTestNetwork.router3.port$o[0].channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par EDVRPTestNetwork.router3.port$o[0].channel ber 0
+attr mutable ""
+par EDVRPTestNetwork.router3.port$o[0].channel per 0
+attr mutable ""
+par EDVRPTestNetwork.router3.port$o[1].channel typename "\"ned.DatarateChannel\""
+par EDVRPTestNetwork.router3.port$o[1].channel disabled false
+attr mutable ""
+par EDVRPTestNetwork.router3.port$o[1].channel delay 0.001s
+attr mutable ""
+attr unit s
+par EDVRPTestNetwork.router3.port$o[1].channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par EDVRPTestNetwork.router3.port$o[1].channel ber 0
+attr mutable ""
+par EDVRPTestNetwork.router3.port$o[1].channel per 0
+attr mutable ""
+par EDVRPTestNetwork.router4.port$o[0].channel typename "\"ned.DatarateChannel\""
+par EDVRPTestNetwork.router4.port$o[0].channel disabled false
+attr mutable ""
+par EDVRPTestNetwork.router4.port$o[0].channel delay 0.001s
+attr mutable ""
+attr unit s
+par EDVRPTestNetwork.router4.port$o[0].channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par EDVRPTestNetwork.router4.port$o[0].channel ber 0
+attr mutable ""
+par EDVRPTestNetwork.router4.port$o[0].channel per 0
+attr mutable ""
+par EDVRPTestNetwork.router2.port$o[2].channel typename "\"ned.DatarateChannel\""
+par EDVRPTestNetwork.router2.port$o[2].channel disabled false
+attr mutable ""
+par EDVRPTestNetwork.router2.port$o[2].channel delay 0.005s
+attr mutable ""
+attr unit s
+par EDVRPTestNetwork.router2.port$o[2].channel datarate 1e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPTestNetwork.router2.port$o[2].channel ber 0
+attr mutable ""
+par EDVRPTestNetwork.router2.port$o[2].channel per 0
+attr mutable ""
+par EDVRPTestNetwork.router5.port$o[0].channel typename "\"ned.DatarateChannel\""
+par EDVRPTestNetwork.router5.port$o[0].channel disabled false
+attr mutable ""
+par EDVRPTestNetwork.router5.port$o[0].channel delay 0.005s
+attr mutable ""
+attr unit s
+par EDVRPTestNetwork.router5.port$o[0].channel datarate 1e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPTestNetwork.router5.port$o[0].channel ber 0
+attr mutable ""
+par EDVRPTestNetwork.router5.port$o[0].channel per 0
+attr mutable ""
+par EDVRPTestNetwork.router3.port$o[2].channel typename "\"ned.DatarateChannel\""
+par EDVRPTestNetwork.router3.port$o[2].channel disabled false
+attr mutable ""
+par EDVRPTestNetwork.router3.port$o[2].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par EDVRPTestNetwork.router3.port$o[2].channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par EDVRPTestNetwork.router3.port$o[2].channel ber 0
+attr mutable ""
+par EDVRPTestNetwork.router3.port$o[2].channel per 0
+attr mutable ""
+par EDVRPTestNetwork.router6.port$o[0].channel typename "\"ned.DatarateChannel\""
+par EDVRPTestNetwork.router6.port$o[0].channel disabled false
+attr mutable ""
+par EDVRPTestNetwork.router6.port$o[0].channel delay 0.0001s
+attr mutable ""
+attr unit s
+par EDVRPTestNetwork.router6.port$o[0].channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par EDVRPTestNetwork.router6.port$o[0].channel ber 0
+attr mutable ""
+par EDVRPTestNetwork.router6.port$o[0].channel per 0
+attr mutable ""
+par EDVRPTestNetwork.router5.port$o[1].channel typename "\"ned.DatarateChannel\""
+par EDVRPTestNetwork.router5.port$o[1].channel disabled false
+attr mutable ""
+par EDVRPTestNetwork.router5.port$o[1].channel delay 0.002s
+attr mutable ""
+attr unit s
+par EDVRPTestNetwork.router5.port$o[1].channel datarate 5e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPTestNetwork.router5.port$o[1].channel ber 0
+attr mutable ""
+par EDVRPTestNetwork.router5.port$o[1].channel per 0
+attr mutable ""
+par EDVRPTestNetwork.router6.port$o[1].channel typename "\"ned.DatarateChannel\""
+par EDVRPTestNetwork.router6.port$o[1].channel disabled false
+attr mutable ""
+par EDVRPTestNetwork.router6.port$o[1].channel delay 0.002s
+attr mutable ""
+attr unit s
+par EDVRPTestNetwork.router6.port$o[1].channel datarate 5e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPTestNetwork.router6.port$o[1].channel ber 0
+attr mutable ""
+par EDVRPTestNetwork.router6.port$o[1].channel per 0
+attr mutable ""
+par EDVRPTestNetwork.router1 typename "\"edvrp.EDVRPRouter\""
+par EDVRPTestNetwork.router1 routerId 1
+par EDVRPTestNetwork.router1 helloInterval 5s
+attr unit s
+par EDVRPTestNetwork.router1 holdTimeout 15s
+attr unit s
+par EDVRPTestNetwork.router1 routeTimeout 30s
+attr unit s
+par EDVRPTestNetwork.router1 updateInterval 10s
+attr unit s
+par EDVRPTestNetwork.router1 linkBandwidth 100Mbps
+attr unit Mbps
+par EDVRPTestNetwork.router1 linkLatency 1ms
+attr unit ms
+par EDVRPTestNetwork.router1 alpha 1e+06
+par EDVRPTestNetwork.router1 beta 0.5
+scalar EDVRPTestNetwork.router1 finalTableSize 6
+scalar EDVRPTestNetwork.router1 finalSimTime 250
+scalar EDVRPTestNetwork.router1 routerId 1
+par EDVRPTestNetwork.router2 typename "\"edvrp.EDVRPRouter\""
+par EDVRPTestNetwork.router2 routerId 2
+par EDVRPTestNetwork.router2 helloInterval 5s
+attr unit s
+par EDVRPTestNetwork.router2 holdTimeout 15s
+attr unit s
+par EDVRPTestNetwork.router2 routeTimeout 30s
+attr unit s
+par EDVRPTestNetwork.router2 updateInterval 10s
+attr unit s
+par EDVRPTestNetwork.router2 linkBandwidth 100Mbps
+attr unit Mbps
+par EDVRPTestNetwork.router2 linkLatency 1ms
+attr unit ms
+par EDVRPTestNetwork.router2 alpha 1e+06
+par EDVRPTestNetwork.router2 beta 0.5
+scalar EDVRPTestNetwork.router2 finalTableSize 6
+scalar EDVRPTestNetwork.router2 finalSimTime 250
+scalar EDVRPTestNetwork.router2 routerId 2
+par EDVRPTestNetwork.router3 typename "\"edvrp.EDVRPRouter\""
+par EDVRPTestNetwork.router3 routerId 3
+par EDVRPTestNetwork.router3 helloInterval 5s
+attr unit s
+par EDVRPTestNetwork.router3 holdTimeout 15s
+attr unit s
+par EDVRPTestNetwork.router3 routeTimeout 30s
+attr unit s
+par EDVRPTestNetwork.router3 updateInterval 10s
+attr unit s
+par EDVRPTestNetwork.router3 linkBandwidth 100Mbps
+attr unit Mbps
+par EDVRPTestNetwork.router3 linkLatency 1ms
+attr unit ms
+par EDVRPTestNetwork.router3 alpha 1e+06
+par EDVRPTestNetwork.router3 beta 0.5
+scalar EDVRPTestNetwork.router3 finalTableSize 6
+scalar EDVRPTestNetwork.router3 finalSimTime 250
+scalar EDVRPTestNetwork.router3 routerId 3
+par EDVRPTestNetwork.router4 typename "\"edvrp.EDVRPRouter\""
+par EDVRPTestNetwork.router4 routerId 4
+par EDVRPTestNetwork.router4 helloInterval 5s
+attr unit s
+par EDVRPTestNetwork.router4 holdTimeout 15s
+attr unit s
+par EDVRPTestNetwork.router4 routeTimeout 30s
+attr unit s
+par EDVRPTestNetwork.router4 updateInterval 10s
+attr unit s
+par EDVRPTestNetwork.router4 linkBandwidth 100Mbps
+attr unit Mbps
+par EDVRPTestNetwork.router4 linkLatency 1ms
+attr unit ms
+par EDVRPTestNetwork.router4 alpha 1e+06
+par EDVRPTestNetwork.router4 beta 0.5
+scalar EDVRPTestNetwork.router4 finalTableSize 6
+scalar EDVRPTestNetwork.router4 finalSimTime 250
+scalar EDVRPTestNetwork.router4 routerId 4
+par EDVRPTestNetwork.router5 typename "\"edvrp.EDVRPRouter\""
+par EDVRPTestNetwork.router5 routerId 5
+par EDVRPTestNetwork.router5 helloInterval 5s
+attr unit s
+par EDVRPTestNetwork.router5 holdTimeout 15s
+attr unit s
+par EDVRPTestNetwork.router5 routeTimeout 30s
+attr unit s
+par EDVRPTestNetwork.router5 updateInterval 10s
+attr unit s
+par EDVRPTestNetwork.router5 linkBandwidth 10Mbps
+attr unit Mbps
+par EDVRPTestNetwork.router5 linkLatency 5ms
+attr unit ms
+par EDVRPTestNetwork.router5 alpha 1e+06
+par EDVRPTestNetwork.router5 beta 0.5
+scalar EDVRPTestNetwork.router5 finalTableSize 6
+scalar EDVRPTestNetwork.router5 finalSimTime 250
+scalar EDVRPTestNetwork.router5 routerId 5
+par EDVRPTestNetwork.router6 typename "\"edvrp.EDVRPRouter\""
+par EDVRPTestNetwork.router6 routerId 6
+par EDVRPTestNetwork.router6 helloInterval 5s
+attr unit s
+par EDVRPTestNetwork.router6 holdTimeout 15s
+attr unit s
+par EDVRPTestNetwork.router6 routeTimeout 30s
+attr unit s
+par EDVRPTestNetwork.router6 updateInterval 10s
+attr unit s
+par EDVRPTestNetwork.router6 linkBandwidth 1000Mbps
+attr unit Mbps
+par EDVRPTestNetwork.router6 linkLatency 0.1ms
+attr unit ms
+par EDVRPTestNetwork.router6 alpha 1e+06
+par EDVRPTestNetwork.router6 beta 0.5
+scalar EDVRPTestNetwork.router6 finalTableSize 6
+scalar EDVRPTestNetwork.router6 finalSimTime 250
+scalar EDVRPTestNetwork.router6 routerId 6
+par EDVRPTestNetwork typename "\"edvrp.simulations.EDVRPTestNetwork\""
+

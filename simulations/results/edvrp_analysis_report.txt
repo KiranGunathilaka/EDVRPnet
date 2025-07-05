@@ -1,0 +1,71 @@
+EDVRP PROTOCOL ANALYSIS REPORT
+==================================================
+
+Configurations tested: EDVRPStress, EDVRPScalability, EDVRPMetrics, EDVRPLinkFailure, EDVRPDebug, EDVRPBasic, EDVRPComparison, EDVRPComparisonEDVRP
+Routers analyzed: 1, 2, 3, 4, 5, 6, unknown
+Total data points: 56217
+
+PERFORMANCE SUMMARY:
+--------------------
+
+EDVRPStress:
+  Final routing table size: 15.0 entries
+  Average table size: 8.6 entries
+  Convergence updates: 218
+  Total HELLO messages: 34000.0
+  Protocol efficiency: 15000 transmissions
+
+EDVRPScalability:
+  Final routing table size: 5.0 entries
+  Average table size: 3.5 entries
+  Convergence updates: 20
+  Total HELLO messages: 1336.0
+  Protocol efficiency: 835 transmissions
+
+EDVRPMetrics:
+  Final routing table size: 6.0 entries
+  Average table size: 4.2 entries
+  Convergence updates: 34
+  Total HELLO messages: 600.0
+  Protocol efficiency: 300 transmissions
+
+EDVRPLinkFailure:
+  Final routing table size: 6.0 entries
+  Average table size: 4.2 entries
+  Convergence updates: 34
+  Total HELLO messages: 1800.0
+  Protocol efficiency: 900 transmissions
+
+EDVRPDebug:
+  Final routing table size: 6.0 entries
+  Average table size: 4.2 entries
+  Convergence updates: 34
+  Total HELLO messages: 120.0
+  Protocol efficiency: 60 transmissions
+
+EDVRPBasic:
+  Final routing table size: 6.0 entries
+  Average table size: 4.2 entries
+  Convergence updates: 34
+  Total HELLO messages: 480.0
+  Protocol efficiency: 240 transmissions
+
+EDVRPComparison:
+  Final routing table size: 6.0 entries
+  Average table size: 4.0 entries
+  Convergence updates: 30
+  Total HELLO messages: 240.0
+  Protocol efficiency: 120 transmissions
+
+EDVRPComparisonEDVRP:
+  Final routing table size: 6.0 entries
+  Average table size: 4.2 entries
+  Convergence updates: 34
+  Total HELLO messages: 480.0
+  Protocol efficiency: 240 transmissions
+
+EDVRP ADVANTAGES DEMONSTRATED:
+1. Fast convergence - routing tables reach full size quickly
+2. Efficient updates - minimal routing table changes needed
+3. Controlled overhead - regular but not excessive HELLO messages
+4. Scalable design - consistent performance across routers

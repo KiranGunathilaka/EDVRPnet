@@ -1,0 +1,2417 @@
+version 3
+run EDVRPScalability-5-20250705-23:42:48-96628
+attr configname EDVRPScalability
+attr datetime 20250705-23:42:48
+attr datetimef 20250705-234248
+attr experiment EDVRPScalability
+attr inifile omnetpp.ini
+attr iterationvars $N=10
+attr iterationvarsd N=10
+attr iterationvarsf N=10-
+attr measurement $N=10
+attr network edvrp.simulations.EDVRPScalabilityNetwork
+attr processid 96628
+attr repetition 2
+attr replication #2
+attr resultdir results
+attr runnumber 5
+attr seedset 2
+itervar N 10
+config description "EDVRP scalability test with variable number of routers"
+config network edvrp.simulations.EDVRPScalabilityNetwork
+config sim-time-limit 500s
+config repeat 3
+config **.numRouters 10
+config **.router*.helloInterval 3s
+config **.router*.holdTimeout 12s
+config **.router*.routeTimeout 25s
+config **.router*.updateInterval 8s
+config network edvrp.simulations.EDVRPTestNetwork
+config sim-time-limit 300s
+config seed-set 2
+config num-rngs 3
+config rng-class cMersenneTwister
+config output-scalar-file results/EDVRPScalability-5.sca
+config output-vector-file results/EDVRPScalability-5.vec
+config eventlog-file results/EDVRPScalability-5.elog
+config **.scalar-recording true
+config **.vector-recording true
+config **.router*.convergenceTimeSignal.result-recording-modes +histogram,+stats
+config **.router*.routingTableSizeSignal.result-recording-modes +vector,+stats
+config **.router*.messageCountSignal.result-recording-modes +count,+sum
+config debug-on-errors true
+config print-undisposed true
+
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[9] currentTableSize 2
+scalar EDVRPScalabilityNetwork.router[7] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[7] currentTableSize 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[8] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[8] currentTableSize 2
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[5] currentTableSize 2
+scalar EDVRPScalabilityNetwork.router[7] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[7] currentTableSize 3
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[1] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[1] currentTableSize 2
+scalar EDVRPScalabilityNetwork.router[3] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[3] currentTableSize 2
+scalar EDVRPScalabilityNetwork.router[8] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[8] currentTableSize 3
+scalar EDVRPScalabilityNetwork.router[6] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[6] currentTableSize 2
+scalar EDVRPScalabilityNetwork.router[9] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[9] currentTableSize 3
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[1] currentTableSize 3
+scalar EDVRPScalabilityNetwork.router[5] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[5] currentTableSize 3
+scalar EDVRPScalabilityNetwork.router[3] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[3] currentTableSize 3
+scalar EDVRPScalabilityNetwork.router[2] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[2] currentTableSize 2
+scalar EDVRPScalabilityNetwork.router[0] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[0] currentTableSize 2
+scalar EDVRPScalabilityNetwork.router[4] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[4] currentTableSize 2
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[0] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[0] currentTableSize 3
+scalar EDVRPScalabilityNetwork.router[4] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[4] currentTableSize 3
+scalar EDVRPScalabilityNetwork.router[2] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[2] currentTableSize 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[8] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[8] currentTableSize 4
+scalar EDVRPScalabilityNetwork.router[6] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[6] currentTableSize 3
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[6] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[6] currentTableSize 4
+scalar EDVRPScalabilityNetwork.router[4] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[4] currentTableSize 4
+scalar EDVRPScalabilityNetwork.router[2] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[2] currentTableSize 4
+scalar EDVRPScalabilityNetwork.router[0] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[0] currentTableSize 4
+scalar EDVRPScalabilityNetwork.router[2] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[2] currentTableSize 5
+scalar EDVRPScalabilityNetwork.router[5] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[5] currentTableSize 4
+scalar EDVRPScalabilityNetwork.router[5] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[5] currentTableSize 5
+scalar EDVRPScalabilityNetwork.router[7] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[7] currentTableSize 4
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[3] currentTableSize 4
+scalar EDVRPScalabilityNetwork.router[5] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[5] currentTableSize 6
+scalar EDVRPScalabilityNetwork.router[1] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[1] currentTableSize 4
+scalar EDVRPScalabilityNetwork.router[1] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[1] currentTableSize 5
+scalar EDVRPScalabilityNetwork.router[1] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[1] currentTableSize 6
+scalar EDVRPScalabilityNetwork.router[5] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[5] currentTableSize 7
+scalar EDVRPScalabilityNetwork.router[5] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[5] currentTableSize 8
+scalar EDVRPScalabilityNetwork.router[5] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[5] currentTableSize 9
+scalar EDVRPScalabilityNetwork.router[3] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[3] currentTableSize 5
+scalar EDVRPScalabilityNetwork.router[3] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[3] currentTableSize 6
+scalar EDVRPScalabilityNetwork.router[2] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[2] currentTableSize 5
+scalar EDVRPScalabilityNetwork.router[2] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[2] currentTableSize 6
+scalar EDVRPScalabilityNetwork.router[0] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[0] currentTableSize 4
+scalar EDVRPScalabilityNetwork.router[0] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[0] currentTableSize 5
+scalar EDVRPScalabilityNetwork.router[0] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[0] currentTableSize 6
+scalar EDVRPScalabilityNetwork.router[4] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[4] currentTableSize 5
+scalar EDVRPScalabilityNetwork.router[4] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[4] currentTableSize 6
+scalar EDVRPScalabilityNetwork.router[9] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[9] currentTableSize 4
+scalar EDVRPScalabilityNetwork.router[7] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[7] currentTableSize 5
+scalar EDVRPScalabilityNetwork.router[5] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[5] currentTableSize 9
+scalar EDVRPScalabilityNetwork.router[6] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[6] currentTableSize 5
+scalar EDVRPScalabilityNetwork.router[6] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[6] currentTableSize 6
+scalar EDVRPScalabilityNetwork.router[6] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[6] currentTableSize 7
+scalar EDVRPScalabilityNetwork.router[6] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[6] currentTableSize 8
+scalar EDVRPScalabilityNetwork.router[6] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[6] currentTableSize 9
+scalar EDVRPScalabilityNetwork.router[4] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[4] currentTableSize 6
+scalar EDVRPScalabilityNetwork.router[4] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[4] currentTableSize 7
+scalar EDVRPScalabilityNetwork.router[4] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[4] currentTableSize 8
+scalar EDVRPScalabilityNetwork.router[4] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[4] currentTableSize 9
+scalar EDVRPScalabilityNetwork.router[2] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[2] currentTableSize 6
+scalar EDVRPScalabilityNetwork.router[2] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[2] currentTableSize 7
+scalar EDVRPScalabilityNetwork.router[2] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[2] currentTableSize 8
+scalar EDVRPScalabilityNetwork.router[2] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[2] currentTableSize 9
+scalar EDVRPScalabilityNetwork.router[8] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[8] currentTableSize 5
+scalar EDVRPScalabilityNetwork.router[6] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[6] currentTableSize 10
+scalar EDVRPScalabilityNetwork.router[5] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[5] currentTableSize 10
+scalar EDVRPScalabilityNetwork.router[7] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[7] currentTableSize 6
+scalar EDVRPScalabilityNetwork.router[7] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[7] currentTableSize 7
+scalar EDVRPScalabilityNetwork.router[7] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[7] currentTableSize 8
+scalar EDVRPScalabilityNetwork.router[7] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[7] currentTableSize 9
+scalar EDVRPScalabilityNetwork.router[7] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[7] currentTableSize 10
+scalar EDVRPScalabilityNetwork.router[9] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[9] currentTableSize 5
+scalar EDVRPScalabilityNetwork.router[1] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[1] currentTableSize 7
+scalar EDVRPScalabilityNetwork.router[1] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[1] currentTableSize 8
+scalar EDVRPScalabilityNetwork.router[1] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[1] currentTableSize 9
+scalar EDVRPScalabilityNetwork.router[3] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[3] currentTableSize 7
+scalar EDVRPScalabilityNetwork.router[3] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[3] currentTableSize 8
+scalar EDVRPScalabilityNetwork.router[3] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[3] currentTableSize 9
+scalar EDVRPScalabilityNetwork.router[0] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[0] currentTableSize 7
+scalar EDVRPScalabilityNetwork.router[0] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[0] currentTableSize 8
+scalar EDVRPScalabilityNetwork.router[0] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[0] currentTableSize 9
+scalar EDVRPScalabilityNetwork.router[4] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[4] currentTableSize 10
+scalar EDVRPScalabilityNetwork.router[2] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[2] currentTableSize 10
+scalar EDVRPScalabilityNetwork.router[0] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[0] currentTableSize 9
+scalar EDVRPScalabilityNetwork.router[0] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[0] currentTableSize 9
+scalar EDVRPScalabilityNetwork.router[0] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[0] currentTableSize 9
+scalar EDVRPScalabilityNetwork.router[8] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[8] currentTableSize 6
+scalar EDVRPScalabilityNetwork.router[8] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[8] currentTableSize 7
+scalar EDVRPScalabilityNetwork.router[8] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[8] currentTableSize 8
+scalar EDVRPScalabilityNetwork.router[8] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[8] currentTableSize 9
+scalar EDVRPScalabilityNetwork.router[8] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[8] currentTableSize 10
+scalar EDVRPScalabilityNetwork.router[1] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[1] currentTableSize 10
+scalar EDVRPScalabilityNetwork.router[3] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[3] currentTableSize 10
+scalar EDVRPScalabilityNetwork.router[9] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[9] currentTableSize 6
+scalar EDVRPScalabilityNetwork.router[9] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[9] currentTableSize 7
+scalar EDVRPScalabilityNetwork.router[9] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[9] currentTableSize 8
+scalar EDVRPScalabilityNetwork.router[9] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[9] currentTableSize 9
+scalar EDVRPScalabilityNetwork.router[9] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[9] currentTableSize 10
+scalar EDVRPScalabilityNetwork.router[0] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[0] currentTableSize 10
+scalar EDVRPScalabilityNetwork.router[0] routingTableUpdates 1
+scalar EDVRPScalabilityNetwork.router[0] currentTableSize 10
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[8] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[9] helloMessagesSent 1
+scalar EDVRPScalabilityNetwork.router[6] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[0] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[2] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[1] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[3] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[7] helloMessagesSent 2
+scalar EDVRPScalabilityNetwork.router[5] helloMessagesSent 3
+scalar EDVRPScalabilityNetwork.router[4] helloMessagesSent 3
+par EDVRPScalabilityNetwork.router[0].port$o[0].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[0].port$o[0].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[0].port$o[0].channel delay 0.00275257s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[0].port$o[0].channel datarate 7.79512e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[0].port$o[0].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[0].port$o[0].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[1].port$o[0].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[1].port$o[0].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[1].port$o[0].channel delay 0.00394353s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[1].port$o[0].channel datarate 4.50978e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[1].port$o[0].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[1].port$o[0].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[1].port$o[1].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[1].port$o[1].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[1].port$o[1].channel delay 0.00307215s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[1].port$o[1].channel datarate 3.15832e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[1].port$o[1].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[1].port$o[1].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[2].port$o[0].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[2].port$o[0].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[2].port$o[0].channel delay 0.00331543s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[2].port$o[0].channel datarate 2.40054e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[2].port$o[0].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[2].port$o[0].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[2].port$o[1].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[2].port$o[1].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[2].port$o[1].channel delay 0.00358142s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[2].port$o[1].channel datarate 7.51896e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[2].port$o[1].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[2].port$o[1].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[3].port$o[0].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[3].port$o[0].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[3].port$o[0].channel delay 0.0049609s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[3].port$o[0].channel datarate 9.22776e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[3].port$o[0].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[3].port$o[0].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[3].port$o[1].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[3].port$o[1].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[3].port$o[1].channel delay 0.00427943s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[3].port$o[1].channel datarate 5.25724e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[3].port$o[1].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[3].port$o[1].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[4].port$o[0].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[4].port$o[0].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[4].port$o[0].channel delay 0.0026528s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[4].port$o[0].channel datarate 7.10654e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[4].port$o[0].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[4].port$o[0].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[4].port$o[1].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[4].port$o[1].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[4].port$o[1].channel delay 0.00450507s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[4].port$o[1].channel datarate 8.21549e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[4].port$o[1].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[4].port$o[1].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[5].port$o[0].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[5].port$o[0].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[5].port$o[0].channel delay 0.00429504s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[5].port$o[0].channel datarate 5.12366e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[5].port$o[0].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[5].port$o[0].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[5].port$o[1].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[5].port$o[1].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[5].port$o[1].channel delay 0.0012179s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[5].port$o[1].channel datarate 7.06451e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[5].port$o[1].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[5].port$o[1].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[6].port$o[0].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[6].port$o[0].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[6].port$o[0].channel delay 0.00387455s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[6].port$o[0].channel datarate 2.3306e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[6].port$o[0].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[6].port$o[0].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[6].port$o[1].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[6].port$o[1].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[6].port$o[1].channel delay 0.00420868s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[6].port$o[1].channel datarate 4.21386e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[6].port$o[1].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[6].port$o[1].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[7].port$o[0].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[7].port$o[0].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[7].port$o[0].channel delay 0.00394563s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[7].port$o[0].channel datarate 6.54829e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[7].port$o[0].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[7].port$o[0].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[7].port$o[1].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[7].port$o[1].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[7].port$o[1].channel delay 0.00383653s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[7].port$o[1].channel datarate 4.98259e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[7].port$o[1].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[7].port$o[1].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[8].port$o[0].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[8].port$o[0].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[8].port$o[0].channel delay 0.00316375s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[8].port$o[0].channel datarate 6.18357e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[8].port$o[0].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[8].port$o[0].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[8].port$o[1].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[8].port$o[1].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[8].port$o[1].channel delay 0.0014993s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[8].port$o[1].channel datarate 1.76357e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[8].port$o[1].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[8].port$o[1].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[9].port$o[0].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[9].port$o[0].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[9].port$o[0].channel delay 0.00483059s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[9].port$o[0].channel datarate 3.00955e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[9].port$o[0].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[9].port$o[0].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[0].port$o[1].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[0].port$o[1].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[0].port$o[1].channel delay 0.00441954s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[0].port$o[1].channel datarate 8.26835e+07bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[0].port$o[1].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[0].port$o[1].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[3].port$o[2].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[3].port$o[2].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[3].port$o[2].channel delay 0.00330171s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[3].port$o[2].channel datarate 1.73839e+08bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[3].port$o[2].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[3].port$o[2].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[1].port$o[2].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[1].port$o[2].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[1].port$o[2].channel delay 0.00630366s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[1].port$o[2].channel datarate 1.19036e+08bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[1].port$o[2].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[1].port$o[2].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[4].port$o[2].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[4].port$o[2].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[4].port$o[2].channel delay 0.00796524s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[4].port$o[2].channel datarate 1.31854e+08bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[4].port$o[2].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[4].port$o[2].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[2].port$o[2].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[2].port$o[2].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[2].port$o[2].channel delay 0.00353368s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[2].port$o[2].channel datarate 1.68141e+08bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[2].port$o[2].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[2].port$o[2].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[5].port$o[2].channel typename "\"ned.DatarateChannel\""
+par EDVRPScalabilityNetwork.router[5].port$o[2].channel disabled false
+attr mutable ""
+par EDVRPScalabilityNetwork.router[5].port$o[2].channel delay 0.00602786s
+attr mutable ""
+attr unit s
+par EDVRPScalabilityNetwork.router[5].port$o[2].channel datarate 1.60979e+08bps
+attr mutable ""
+attr unit bps
+par EDVRPScalabilityNetwork.router[5].port$o[2].channel ber 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[5].port$o[2].channel per 0
+attr mutable ""
+par EDVRPScalabilityNetwork.router[0] typename "\"edvrp.EDVRPRouter\""
+par EDVRPScalabilityNetwork.router[0] routerId 1
+par EDVRPScalabilityNetwork.router[0] helloInterval 3s
+attr unit s
+par EDVRPScalabilityNetwork.router[0] holdTimeout 12s
+attr unit s
+par EDVRPScalabilityNetwork.router[0] routeTimeout 25s
+attr unit s
+par EDVRPScalabilityNetwork.router[0] updateInterval 8s
+attr unit s
+par EDVRPScalabilityNetwork.router[0] linkBandwidth 90.3574Mbps
+attr unit Mbps
+par EDVRPScalabilityNetwork.router[0] linkLatency 9.52728ms
+attr unit ms
+par EDVRPScalabilityNetwork.router[0] alpha 1e+06
+par EDVRPScalabilityNetwork.router[0] beta 1
+scalar EDVRPScalabilityNetwork.router[0] finalTableSize 10
+scalar EDVRPScalabilityNetwork.router[0] finalSimTime 500
+scalar EDVRPScalabilityNetwork.router[0] routerId 1
+par EDVRPScalabilityNetwork.router[1] typename "\"edvrp.EDVRPRouter\""
+par EDVRPScalabilityNetwork.router[1] routerId 2
+par EDVRPScalabilityNetwork.router[1] helloInterval 3s
+attr unit s
+par EDVRPScalabilityNetwork.router[1] holdTimeout 12s
+attr unit s
+par EDVRPScalabilityNetwork.router[1] routeTimeout 25s
+attr unit s
+par EDVRPScalabilityNetwork.router[1] updateInterval 8s
+attr unit s
+par EDVRPScalabilityNetwork.router[1] linkBandwidth 39.8782Mbps
+attr unit Mbps
+par EDVRPScalabilityNetwork.router[1] linkLatency 2.88466ms
+attr unit ms
+par EDVRPScalabilityNetwork.router[1] alpha 1e+06
+par EDVRPScalabilityNetwork.router[1] beta 1
+scalar EDVRPScalabilityNetwork.router[1] finalTableSize 10
+scalar EDVRPScalabilityNetwork.router[1] finalSimTime 500
+scalar EDVRPScalabilityNetwork.router[1] routerId 2
+par EDVRPScalabilityNetwork.router[2] typename "\"edvrp.EDVRPRouter\""
+par EDVRPScalabilityNetwork.router[2] routerId 3
+par EDVRPScalabilityNetwork.router[2] helloInterval 3s
+attr unit s
+par EDVRPScalabilityNetwork.router[2] holdTimeout 12s
+attr unit s
+par EDVRPScalabilityNetwork.router[2] routeTimeout 25s
+attr unit s
+par EDVRPScalabilityNetwork.router[2] updateInterval 8s
+attr unit s
+par EDVRPScalabilityNetwork.router[2] linkBandwidth 83.9106Mbps
+attr unit Mbps
+par EDVRPScalabilityNetwork.router[2] linkLatency 1.57829ms
+attr unit ms
+par EDVRPScalabilityNetwork.router[2] alpha 1e+06
+par EDVRPScalabilityNetwork.router[2] beta 1
+scalar EDVRPScalabilityNetwork.router[2] finalTableSize 10
+scalar EDVRPScalabilityNetwork.router[2] finalSimTime 500
+scalar EDVRPScalabilityNetwork.router[2] routerId 3
+par EDVRPScalabilityNetwork.router[3] typename "\"edvrp.EDVRPRouter\""
+par EDVRPScalabilityNetwork.router[3] routerId 4
+par EDVRPScalabilityNetwork.router[3] helloInterval 3s
+attr unit s
+par EDVRPScalabilityNetwork.router[3] holdTimeout 12s
+attr unit s
+par EDVRPScalabilityNetwork.router[3] routeTimeout 25s
+attr unit s
+par EDVRPScalabilityNetwork.router[3] updateInterval 8s
+attr unit s
+par EDVRPScalabilityNetwork.router[3] linkBandwidth 13.7527Mbps
+attr unit Mbps
+par EDVRPScalabilityNetwork.router[3] linkLatency 4.33098ms
+attr unit ms
+par EDVRPScalabilityNetwork.router[3] alpha 1e+06
+par EDVRPScalabilityNetwork.router[3] beta 1
+scalar EDVRPScalabilityNetwork.router[3] finalTableSize 10
+scalar EDVRPScalabilityNetwork.router[3] finalSimTime 500
+scalar EDVRPScalabilityNetwork.router[3] routerId 4
+par EDVRPScalabilityNetwork.router[4] typename "\"edvrp.EDVRPRouter\""
+par EDVRPScalabilityNetwork.router[4] routerId 5
+par EDVRPScalabilityNetwork.router[4] helloInterval 3s
+attr unit s
+par EDVRPScalabilityNetwork.router[4] holdTimeout 12s
+attr unit s
+par EDVRPScalabilityNetwork.router[4] routeTimeout 25s
+attr unit s
+par EDVRPScalabilityNetwork.router[4] updateInterval 8s
+attr unit s
+par EDVRPScalabilityNetwork.router[4] linkBandwidth 19.6891Mbps
+attr unit Mbps
+par EDVRPScalabilityNetwork.router[4] linkLatency 9.86526ms
+attr unit ms
+par EDVRPScalabilityNetwork.router[4] alpha 1e+06
+par EDVRPScalabilityNetwork.router[4] beta 1
+scalar EDVRPScalabilityNetwork.router[4] finalTableSize 10
+scalar EDVRPScalabilityNetwork.router[4] finalSimTime 500
+scalar EDVRPScalabilityNetwork.router[4] routerId 5
+par EDVRPScalabilityNetwork.router[5] typename "\"edvrp.EDVRPRouter\""
+par EDVRPScalabilityNetwork.router[5] routerId 6
+par EDVRPScalabilityNetwork.router[5] helloInterval 3s
+attr unit s
+par EDVRPScalabilityNetwork.router[5] holdTimeout 12s
+attr unit s
+par EDVRPScalabilityNetwork.router[5] routeTimeout 25s
+attr unit s
+par EDVRPScalabilityNetwork.router[5] updateInterval 8s
+attr unit s
+par EDVRPScalabilityNetwork.router[5] linkBandwidth 63.5547Mbps
+attr unit Mbps
+par EDVRPScalabilityNetwork.router[5] linkLatency 1.89525ms
+attr unit ms
+par EDVRPScalabilityNetwork.router[5] alpha 1e+06
+par EDVRPScalabilityNetwork.router[5] beta 1
+scalar EDVRPScalabilityNetwork.router[5] finalTableSize 10
+scalar EDVRPScalabilityNetwork.router[5] finalSimTime 500
+scalar EDVRPScalabilityNetwork.router[5] routerId 6
+par EDVRPScalabilityNetwork.router[6] typename "\"edvrp.EDVRPRouter\""
+par EDVRPScalabilityNetwork.router[6] routerId 7
+par EDVRPScalabilityNetwork.router[6] helloInterval 3s
+attr unit s
+par EDVRPScalabilityNetwork.router[6] holdTimeout 12s
+attr unit s
+par EDVRPScalabilityNetwork.router[6] routeTimeout 25s
+attr unit s
+par EDVRPScalabilityNetwork.router[6] updateInterval 8s
+attr unit s
+par EDVRPScalabilityNetwork.router[6] linkBandwidth 57.6836Mbps
+attr unit Mbps
+par EDVRPScalabilityNetwork.router[6] linkLatency 6.47626ms
+attr unit ms
+par EDVRPScalabilityNetwork.router[6] alpha 1e+06
+par EDVRPScalabilityNetwork.router[6] beta 1
+scalar EDVRPScalabilityNetwork.router[6] finalTableSize 10
+scalar EDVRPScalabilityNetwork.router[6] finalSimTime 500
+scalar EDVRPScalabilityNetwork.router[6] routerId 7
+par EDVRPScalabilityNetwork.router[7] typename "\"edvrp.EDVRPRouter\""
+par EDVRPScalabilityNetwork.router[7] routerId 8
+par EDVRPScalabilityNetwork.router[7] helloInterval 3s
+attr unit s
+par EDVRPScalabilityNetwork.router[7] holdTimeout 12s
+attr unit s
+par EDVRPScalabilityNetwork.router[7] routeTimeout 25s
+attr unit s
+par EDVRPScalabilityNetwork.router[7] updateInterval 8s
+attr unit s
+par EDVRPScalabilityNetwork.router[7] linkBandwidth 47.6927Mbps
+attr unit Mbps
+par EDVRPScalabilityNetwork.router[7] linkLatency 5.77357ms
+attr unit ms
+par EDVRPScalabilityNetwork.router[7] alpha 1e+06
+par EDVRPScalabilityNetwork.router[7] beta 1
+scalar EDVRPScalabilityNetwork.router[7] finalTableSize 10
+scalar EDVRPScalabilityNetwork.router[7] finalSimTime 500
+scalar EDVRPScalabilityNetwork.router[7] routerId 8
+par EDVRPScalabilityNetwork.router[8] typename "\"edvrp.EDVRPRouter\""
+par EDVRPScalabilityNetwork.router[8] routerId 9
+par EDVRPScalabilityNetwork.router[8] helloInterval 3s
+attr unit s
+par EDVRPScalabilityNetwork.router[8] holdTimeout 12s
+attr unit s
+par EDVRPScalabilityNetwork.router[8] routeTimeout 25s
+attr unit s
+par EDVRPScalabilityNetwork.router[8] updateInterval 8s
+attr unit s
+par EDVRPScalabilityNetwork.router[8] linkBandwidth 40.1867Mbps
+attr unit Mbps
+par EDVRPScalabilityNetwork.router[8] linkLatency 5.34549ms
+attr unit ms
+par EDVRPScalabilityNetwork.router[8] alpha 1e+06
+par EDVRPScalabilityNetwork.router[8] beta 1
+scalar EDVRPScalabilityNetwork.router[8] finalTableSize 10
+scalar EDVRPScalabilityNetwork.router[8] finalSimTime 500
+scalar EDVRPScalabilityNetwork.router[8] routerId 9
+par EDVRPScalabilityNetwork.router[9] typename "\"edvrp.EDVRPRouter\""
+par EDVRPScalabilityNetwork.router[9] routerId 10
+par EDVRPScalabilityNetwork.router[9] helloInterval 3s
+attr unit s
+par EDVRPScalabilityNetwork.router[9] holdTimeout 12s
+attr unit s
+par EDVRPScalabilityNetwork.router[9] routeTimeout 25s
+attr unit s
+par EDVRPScalabilityNetwork.router[9] updateInterval 8s
+attr unit s
+par EDVRPScalabilityNetwork.router[9] linkBandwidth 66.0267Mbps
+attr unit Mbps
+par EDVRPScalabilityNetwork.router[9] linkLatency 8.42688ms
+attr unit ms
+par EDVRPScalabilityNetwork.router[9] alpha 1e+06
+par EDVRPScalabilityNetwork.router[9] beta 1
+scalar EDVRPScalabilityNetwork.router[9] finalTableSize 10
+scalar EDVRPScalabilityNetwork.router[9] finalSimTime 500
+scalar EDVRPScalabilityNetwork.router[9] routerId 10
+par EDVRPScalabilityNetwork typename "\"edvrp.simulations.EDVRPScalabilityNetwork\""
+par EDVRPScalabilityNetwork numRouters 10
+

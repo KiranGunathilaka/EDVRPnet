@@ -1,0 +1,403 @@
+file 80805 1751739352                                           
+version 3
+run EDVRPComparisonEDVRP-1-20250705-23:45:43-97481
+attr configname EDVRPComparisonEDVRP
+attr datetime 20250705-23:45:43
+attr datetimef 20250705-234543
+attr experiment EDVRPComparisonEDVRP
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network edvrp.simulations.EDVRPTestNetwork
+attr processid 97481
+attr repetition 1
+attr replication #1
+attr resultdir results
+attr runnumber 1
+attr seedset 1
+config description "EDVRP behavior on comparison topology"
+config network edvrp.simulations.EDVRPTestNetwork
+config sim-time-limit 200s
+config repeat 5
+config cmdenv-express-mode false
+config cmdenv-autoflush true
+config **.router*.**.result-recording-modes +vector,+histogram,+stats
+config network edvrp.simulations.EDVRPTestNetwork
+config sim-time-limit 300s
+config seed-set 1
+config num-rngs 3
+config rng-class cMersenneTwister
+config output-scalar-file results/EDVRPComparisonEDVRP-1.sca
+config output-vector-file results/EDVRPComparisonEDVRP-1.vec
+config eventlog-file results/EDVRPComparisonEDVRP-1.elog
+config **.scalar-recording true
+config **.vector-recording true
+config **.router*.convergenceTimeSignal.result-recording-modes +histogram,+stats
+config **.router*.routingTableSizeSignal.result-recording-modes +vector,+stats
+config **.router*.messageCountSignal.result-recording-modes +count,+sum
+config debug-on-errors true
+config print-undisposed true
+
+vector 0 EDVRPTestNetwork.router1.port$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 1 EDVRPTestNetwork.router1.port$o[0].channel utilization:vector ETV
+attr recordingmode vector
+attr source timeavg(channelBusy)
+vector 2 EDVRPTestNetwork.router1.port$o[0].channel packets:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageSent)
+vector 3 EDVRPTestNetwork.router1.port$o[0].channel packetBytes:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetBytes(messageSent)
+attr unit B
+vector 4 EDVRPTestNetwork.router1.port$o[0].channel packetsDiscarded:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageDiscarded)
+vector 5 EDVRPTestNetwork.router1.port$o[0].channel throughput:vector ETV
+attr recordingmode vector
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+vector 6 EDVRPTestNetwork.router2.port$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 7 EDVRPTestNetwork.router2.port$o[0].channel utilization:vector ETV
+attr recordingmode vector
+attr source timeavg(channelBusy)
+vector 8 EDVRPTestNetwork.router2.port$o[0].channel packets:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageSent)
+vector 9 EDVRPTestNetwork.router2.port$o[0].channel packetBytes:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetBytes(messageSent)
+attr unit B
+vector 10 EDVRPTestNetwork.router2.port$o[0].channel packetsDiscarded:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageDiscarded)
+vector 11 EDVRPTestNetwork.router2.port$o[0].channel throughput:vector ETV
+attr recordingmode vector
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+vector 12 EDVRPTestNetwork.router2.port$o[1].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 13 EDVRPTestNetwork.router2.port$o[1].channel utilization:vector ETV
+attr recordingmode vector
+attr source timeavg(channelBusy)
+vector 14 EDVRPTestNetwork.router2.port$o[1].channel packets:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageSent)
+vector 15 EDVRPTestNetwork.router2.port$o[1].channel packetBytes:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetBytes(messageSent)
+attr unit B
+vector 16 EDVRPTestNetwork.router2.port$o[1].channel packetsDiscarded:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageDiscarded)
+vector 17 EDVRPTestNetwork.router2.port$o[1].channel throughput:vector ETV
+attr recordingmode vector
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+vector 18 EDVRPTestNetwork.router3.port$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 19 EDVRPTestNetwork.router3.port$o[0].channel utilization:vector ETV
+attr recordingmode vector
+attr source timeavg(channelBusy)
+vector 20 EDVRPTestNetwork.router3.port$o[0].channel packets:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageSent)
+vector 21 EDVRPTestNetwork.router3.port$o[0].channel packetBytes:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetBytes(messageSent)
+attr unit B
+vector 22 EDVRPTestNetwork.router3.port$o[0].channel packetsDiscarded:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageDiscarded)
+vector 23 EDVRPTestNetwork.router3.port$o[0].channel throughput:vector ETV
+attr recordingmode vector
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+vector 24 EDVRPTestNetwork.router3.port$o[1].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 25 EDVRPTestNetwork.router3.port$o[1].channel utilization:vector ETV
+attr recordingmode vector
+attr source timeavg(channelBusy)
+vector 26 EDVRPTestNetwork.router3.port$o[1].channel packets:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageSent)
+vector 27 EDVRPTestNetwork.router3.port$o[1].channel packetBytes:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetBytes(messageSent)
+attr unit B
+vector 28 EDVRPTestNetwork.router3.port$o[1].channel packetsDiscarded:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageDiscarded)
+vector 29 EDVRPTestNetwork.router3.port$o[1].channel throughput:vector ETV
+attr recordingmode vector
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+vector 30 EDVRPTestNetwork.router4.port$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 31 EDVRPTestNetwork.router4.port$o[0].channel utilization:vector ETV
+attr recordingmode vector
+attr source timeavg(channelBusy)
+vector 32 EDVRPTestNetwork.router4.port$o[0].channel packets:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageSent)
+vector 33 EDVRPTestNetwork.router4.port$o[0].channel packetBytes:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetBytes(messageSent)
+attr unit B
+vector 34 EDVRPTestNetwork.router4.port$o[0].channel packetsDiscarded:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageDiscarded)
+vector 35 EDVRPTestNetwork.router4.port$o[0].channel throughput:vector ETV
+attr recordingmode vector
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+vector 36 EDVRPTestNetwork.router2.port$o[2].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 37 EDVRPTestNetwork.router2.port$o[2].channel utilization:vector ETV
+attr recordingmode vector
+attr source timeavg(channelBusy)
+vector 38 EDVRPTestNetwork.router2.port$o[2].channel packets:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageSent)
+vector 39 EDVRPTestNetwork.router2.port$o[2].channel packetBytes:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetBytes(messageSent)
+attr unit B
+vector 40 EDVRPTestNetwork.router2.port$o[2].channel packetsDiscarded:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageDiscarded)
+vector 41 EDVRPTestNetwork.router2.port$o[2].channel throughput:vector ETV
+attr recordingmode vector
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+vector 42 EDVRPTestNetwork.router5.port$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 43 EDVRPTestNetwork.router5.port$o[0].channel utilization:vector ETV
+attr recordingmode vector
+attr source timeavg(channelBusy)
+vector 44 EDVRPTestNetwork.router5.port$o[0].channel packets:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageSent)
+vector 45 EDVRPTestNetwork.router5.port$o[0].channel packetBytes:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetBytes(messageSent)
+attr unit B
+vector 46 EDVRPTestNetwork.router5.port$o[0].channel packetsDiscarded:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageDiscarded)
+vector 47 EDVRPTestNetwork.router5.port$o[0].channel throughput:vector ETV
+attr recordingmode vector
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+vector 48 EDVRPTestNetwork.router3.port$o[2].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 49 EDVRPTestNetwork.router3.port$o[2].channel utilization:vector ETV
+attr recordingmode vector
+attr source timeavg(channelBusy)
+vector 50 EDVRPTestNetwork.router3.port$o[2].channel packets:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageSent)
+vector 51 EDVRPTestNetwork.router3.port$o[2].channel packetBytes:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetBytes(messageSent)
+attr unit B
+vector 52 EDVRPTestNetwork.router3.port$o[2].channel packetsDiscarded:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageDiscarded)
+vector 53 EDVRPTestNetwork.router3.port$o[2].channel throughput:vector ETV
+attr recordingmode vector
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+vector 54 EDVRPTestNetwork.router6.port$o[0].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 55 EDVRPTestNetwork.router6.port$o[0].channel utilization:vector ETV
+attr recordingmode vector
+attr source timeavg(channelBusy)
+vector 56 EDVRPTestNetwork.router6.port$o[0].channel packets:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageSent)
+vector 57 EDVRPTestNetwork.router6.port$o[0].channel packetBytes:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetBytes(messageSent)
+attr unit B
+vector 58 EDVRPTestNetwork.router6.port$o[0].channel packetsDiscarded:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageDiscarded)
+vector 59 EDVRPTestNetwork.router6.port$o[0].channel throughput:vector ETV
+attr recordingmode vector
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+vector 60 EDVRPTestNetwork.router5.port$o[1].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 61 EDVRPTestNetwork.router5.port$o[1].channel utilization:vector ETV
+attr recordingmode vector
+attr source timeavg(channelBusy)
+vector 62 EDVRPTestNetwork.router5.port$o[1].channel packets:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageSent)
+vector 63 EDVRPTestNetwork.router5.port$o[1].channel packetBytes:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetBytes(messageSent)
+attr unit B
+vector 64 EDVRPTestNetwork.router5.port$o[1].channel packetsDiscarded:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageDiscarded)
+vector 65 EDVRPTestNetwork.router5.port$o[1].channel throughput:vector ETV
+attr recordingmode vector
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+vector 66 EDVRPTestNetwork.router6.port$o[1].channel busy:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source channelBusy
+vector 67 EDVRPTestNetwork.router6.port$o[1].channel utilization:vector ETV
+attr recordingmode vector
+attr source timeavg(channelBusy)
+vector 68 EDVRPTestNetwork.router6.port$o[1].channel packets:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageSent)
+vector 69 EDVRPTestNetwork.router6.port$o[1].channel packetBytes:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetBytes(messageSent)
+attr unit B
+vector 70 EDVRPTestNetwork.router6.port$o[1].channel packetsDiscarded:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source constant1(messageDiscarded)
+vector 71 EDVRPTestNetwork.router6.port$o[1].channel throughput:vector ETV
+attr recordingmode vector
+attr source sumPerDuration(packetBits(messageSent))
+attr unit bps
+0	13079 1137 0 3186 0 195.550797904376 47 0 0 0 0
+1	14216 1120 19 3186 0.376055920705 195.550797904376 45 0 0 0 0
+2	15336 1126 0 3118 0 195.550797904376 46 1 1 46 46
+3	16462 1118 11 3118 0.376055920705 195.550797904376 45 0 0 0 0
+4	17580 8 0 0 0 0 1 1 1 1 1
+5	17588 1118 11 3118 0.376055920705 195.550797904376 45 0 0 0 0
+6	18706 1091 0 3186 0 195.070724880323 45 0 0 0 0
+7	19797 1075 27 3186 0.070724880323 195.070724880323 43 0 0 0 0
+8	20872 1080 0 3108 0 195.070724880323 44 1 1 44 44
+9	21952 1072 1 3108 0.070724880323 195.070724880323 43 0 0 0 0
+10	23024 9 0 0 0 0 1 1 1 1 1
+11	23033 1115 1 3108 0.070724880323 195.070724880323 43 0 0 0 0
+12	24148 1136 0 3186 0 195.070724880323 45 0 0 0 0
+13	25284 1118 27 3186 0.070724880323 195.070724880323 43 0 0 0 0
+14	26402 1124 0 3108 0 195.070724880323 44 1 1 44 44
+15	27526 1115 1 3108 0.070724880323 195.070724880323 43 0 0 0 0
+16	28641 9 0 0 0 0 1 1 1 1 1
+17	28650 1115 1 3108 0.070724880323 195.070724880323 43 0 0 0 0
+18	29765 1137 0 3186 0 195.708147822181 45 0 0 0 0
+19	30902 1118 23 3186 0.399449410591 195.708147822181 43 0 0 0 0
+20	32020 1125 0 3120 0 195.708147822181 44 1 1 44 44
+21	33145 1116 13 3120 0.399449410591 195.708147822181 43 0 0 0 0
+22	34261 9 0 0 0 0 1 1 1 1 1
+23	34270 1116 13 3120 0.399449410591 195.708147822181 43 0 0 0 0
+24	35386 1114 0 3186 0 195.708147822181 44 0 0 0 0
+25	36500 1095 40 3186 0.708147822181 195.708147822181 42 0 0 0 0
+26	37595 1102 0 3120 0 195.708147822181 43 1 1 43 43
+27	38697 1093 23 3120 0.708147822181 195.708147822181 42 0 0 0 0
+28	39790 9 0 0 0 0 1 1 1 1 1
+29	39799 1093 23 3120 0.708147822181 195.708147822181 42 0 0 0 0
+30	40892 1137 0 3186 0 195.839949042303 45 0 0 0 0
+31	42029 1118 36 3186 0.839949042303 195.839949042303 43 0 0 0 0
+32	43147 1125 0 3124 0 195.839949042303 44 1 1 44 44
+33	44272 1116 34 3124 0.839949042303 195.839949042303 43 0 0 0 0
+34	45388 9 0 0 0 0 1 1 1 1 1
+35	45397 1116 34 3124 0.839949042303 195.839949042303 43 0 0 0 0
+36	46513 1136 0 3186 0 195.070724880323 45 0 0 0 0
+37	47649 1118 27 3186 0.070724880323 195.070724880323 43 0 0 0 0
+38	48767 1124 0 3108 0 195.070724880323 44 1 1 44 44
+39	49891 1115 1 3108 0.070724880323 195.070724880323 43 0 0 0 0
+40	51006 9 0 0 0 0 1 1 1 1 1
+41	51015 1115 1 3108 0.070724880323 195.070724880323 43 0 0 0 0
+42	52130 1183 0 3186 0 195.290904743597 47 0 0 0 0
+43	53313 1165 16 3186 0.290904743597 195.290904743597 45 0 0 0 0
+44	54478 1171 0 3115 0 195.290904743597 46 1 1 46 46
+45	55649 1162 8 3115 0.290904743597 195.290904743597 45 0 0 0 0
+46	56811 9 0 0 0 0 1 1 1 1 1
+47	56820 1162 8 3115 0.290904743597 195.290904743597 45 0 0 0 0
+48	57982 1137 0 3186 0 195.708147822181 45 0 0 0 0
+49	59119 1118 23 3186 0.399449410591 195.708147822181 43 0 0 0 0
+50	60237 1125 0 3120 0 195.708147822181 44 1 1 44 44
+51	61362 1116 13 3120 0.399449410591 195.708147822181 43 0 0 0 0
+52	62478 9 0 0 0 0 1 1 1 1 1
+53	62487 1116 13 3120 0.399449410591 195.708147822181 43 0 0 0 0
+54	63603 1136 0 3186 0 195.121328579262 45 0 0 0 0
+55	64739 1118 31 3186 0.121328579262 195.121328579262 43 0 0 0 0
+56	65857 1124 0 3112 0 195.121328579262 44 1 1 44 44
+57	66981 1115 5 3112 0.121328579262 195.121328579262 43 0 0 0 0
+58	68096 9 0 0 0 0 1 1 1 1 1
+59	68105 1115 5 3112 0.121328579262 195.121328579262 43 0 0 0 0
+60	69220 1183 0 3186 0 195.290904743597 47 0 0 0 0
+61	70403 1165 16 3186 0.290904743597 195.290904743597 45 0 0 0 0
+62	71568 1171 0 3115 0 195.290904743597 46 1 1 46 46
+63	72739 1162 8 3115 0.290904743597 195.290904743597 45 0 0 0 0
+64	73901 9 0 0 0 0 1 1 1 1 1
+65	73910 1162 8 3115 0.290904743597 195.290904743597 45 0 0 0 0
+66	75072 1159 0 3186 0 195.121328579262 46 0 0 0 0
+67	76231 1141 21 3186 0.121328579262 195.121328579262 44 0 0 0 0
+68	77372 1147 0 3112 0 195.121328579262 45 1 1 45 45
+69	78519 1138 5 3112 0.121328579262 195.121328579262 44 0 0 0 0
+70	79657 9 0 0 0 0 1 1 1 1 1
+71	79666 1138 5 3112 0.121328579262 195.121328579262 44 0 0 0 0
+
