@@ -9,4 +9,27 @@ So the content will be availble in  /omnetpp-6.1/samples/EDVRP
 
 4. then run "make MODE=release" to build the binaries.
 
-5. After EDVRP binary/executable appear on the directory, go to the omnetpp GUI IDE and inside EDVRP/simulations/ right click on the omnet.ini file and select "Run As" and then "Omnet simulation". Omnet simulation window will appear and select infile test configurations needed and run the simulation.
+5. After EDVRP binary/executable appear on the directory, go to the omnetpp GUI IDE and inside EDVRP/simulations/ right click on the omnet.ini file and select "Run As" and then "Omnet simulation". Omnet simulation window will appear and select infile test configurations needed and run the simulation.   (See the video)
+
+
+# IDE Configuration Selection:
+When running from IDE, you'll see these configurations:
+
+EDVRPBasic: Standard 6-node network test
+EDVRPScalability: Variable network sizes (5,10,15,20 nodes)
+EDVRPLinkFailure: Failure recovery testing
+EDVRPMetrics: Detailed metrics collection
+EDVRPComparison: EDVRP vs RIP comparison
+EDVRPStress: High-load stress testing
+
+# Post-Simulation Analysis
+Result Files Location:
+
+## Results are saved in:
+EDVRP/simulations/results/
+
+## File types generated:
+*.sca  # Scalar results (for analysis)
+*.vec  # Vector results (time series)
+*.vci  # Vector index
+*.elog # Event log
